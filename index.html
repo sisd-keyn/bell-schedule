@@ -663,7 +663,7 @@
     periods.forEach(p => {
       const row = document.createElement("div");
       let cls = "row";
-      if (current && p.name === current.name) cls += " current";
+      if (current && p.startMin === current.startMin && p.endMin === current.endMin) cls += " current";
       else if (nowMin >= p.endMin) cls += " passed";
       row.className = cls;
       row.innerHTML = `
